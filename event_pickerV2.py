@@ -16,7 +16,7 @@ bloomsville = {
     "desc" : "The bridge has collapsed! We lost one snail who was on it. Rest in peace!",
     "cost" : {"money" : [50, 250], "iron" : [0, 3], "steel" : [0, 2], "wood" : [5, 30]},
     "weight" : 20},
-  "mayor drunk" : a {
+  "mayor drunk" : {
     "desc" : "Mayor was drunk while operating the ship! Don't worry, he's still alive",
     "cost" : {"money" : [100, 100], "iron" : [0, 1], "steel" : [0, 0], "wood" : [0, 5]},
     "weight" : 30},
