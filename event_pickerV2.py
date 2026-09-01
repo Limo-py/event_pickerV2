@@ -2,7 +2,7 @@ import random
 import requests
 import sys
 import io
-WEBHOOK_URL = "https://discord.com/api/webhooks/1536032910514196630/2JEuaUME5W6DtbBXxRfKGbjnTg7soBQjrGmwtHeTG39uJ8ww7tekr9m4DeO2IU-BehZp"
+WEBHOOK_URL = "https://discord.com/api/webhooks/1544389373468876962/kkiFHUAJpWdO8_Fuf5l5FONOhMT-1srjdzcfQFFXaNyavkdKoAbqyTNEZUOTMC9yvfkJ"
 old_stdout = sys.stdout
 sys.stdout = catched_output = io.StringIO()
 
@@ -37,6 +37,12 @@ bloomsville = {
 # randomly picking settlement
 settlements = [bloomsville]
 settlement = random.choice(settlements)
+
+# randomly picking event
+picked_event = random.choices(settlement.keys(), 
+
+# printing time
+print(f"Today at Bloomsville happened:.. \n{picked_event}!")
 
 sys.stdout = old_stdout 
 final_text = catched_output.getvalue()
