@@ -46,7 +46,7 @@ event_name = random.choices(event_names, weights=weights, k=1)[0]
 event_data = settlement[event_name]
 
 # printing time
-print(f"Today at {settlement} happened:.. \n{picked_event}!")
+print(f"Today at {settlement} happened:.. \n{event_name}!")
 if event_name == "nothing happened":
   print("No repairs needed!")
 else:
