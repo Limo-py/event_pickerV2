@@ -8,7 +8,7 @@ sys.stdout = catched_output = io.StringIO()
 
 # events and their stuff
 Bloomsville = {
-  "name" : "Bloomsville",
+  "settlements_name" : "Bloomsville",
   "nothing happened" : {
     "desc" : "Today is a nice day isn't it?",
     "cost" : {"money" : [0, 0], "iron" : [0, 0], "steel" : [0, 0], "wood" : [0, 0]},
@@ -47,7 +47,7 @@ event_name = random.choices(event_names, weights=weights, k=1)[0]
 event_data = settlement[event_name]
 
 # printing time
-print(f"Today at {settlement[name]} happened:.. \n{event_name}!")
+print(f"Today at {settlement[settlements_name]} happened:.. \n{event_name}!")
 if event_name == "nothing happened":
   print("No repairs needed!")
 else:
