@@ -26,9 +26,9 @@ jobs:
 
     # 4. Runs your test script (adjust the command to match how you test your code)
     - name: Run tests
-      run: |
+      run: python main.py
         # If you are just testing if main.py compiles without syntax errors:
-        python -m py_compile main.py
+        # python -m py_compile main.py
         
         # OR if you are using a testing framework like pytest:
         # pytest
