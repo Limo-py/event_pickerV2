@@ -29,7 +29,7 @@ Bloomsville = {
     "cost" : {"money" : [500, 2000], "iron" : [10, 30], "steel" : [5, 10], "wood" : [30, 60]},
     "weight" : 5},
   "pirate attack" : {
-    "desc" : "Pirates attacked! We managed to defend ourselves, but they still destroyed part of the town!"
+    "desc" : "Pirates attacked! We managed to defend ourselves, but they still destroyed part of the town!",
     "cost" : {"money" : [75, 350], "iron" : [0, 10], "steel" : [0, 1], "wood" : [0, 20]},
     "weight" : 15}
 }
