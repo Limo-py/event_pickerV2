@@ -7,8 +7,8 @@ old_stdout = sys.stdout
 sys.stdout = catched_output = io.StringIO()
 
 # events and their stuff
-bloomsville = {
-  "nothing happened!" : {
+Bloomsville = {
+  "nothing happened" : {
     "desc" : "Today is a nice day isn't it?",
     "cost" : {"money" : [0, 0], "iron" : [0, 0], "steel" : [0, 0], "wood" : [0, 0]},
     "weight" : 20},
@@ -35,14 +35,22 @@ bloomsville = {
 }
 
 # randomly picking settlement
-settlements = [bloomsville]
+settlements = [Bloomsville]
 settlement = random.choice(settlements)
 
 # randomly picking event
-picked_event = random.choices(settlement.keys(), 
+event_names = list(settlement.keys())
+weights = [settlement[name]["weight"] for name in event_names]
+
+event_name = random.choices(event_names, weights=weights, k=1)[0]
+event_data = settlement[event_name]
 
 # printing time
-print(f"Today at Bloomsville happened:.. \n{picked_event}!")
+print(f"Today at {settlement} happened:.. \n{picked_event}!")
+if event_name == "nothing happened":
+  print("No repairs needed!")
+else:
+  print("repairs costs:")
 
 sys.stdout = old_stdout 
 final_text = catched_output.getvalue()
